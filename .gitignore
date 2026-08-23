@@ -1,0 +1,64 @@
+# =====================================================
+# Python
+# =====================================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environment
+venv/
+.venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python environment
+.python-version
+
+# =====================================================
+# Laravel
+# =====================================================
+jagung-predict/vendor/
+jagung-predict/node_modules/
+
+jagung-predict/.env
+jagung-predict/.env.backup
+jagung-predict/.env.production
+
+# Laravel logs
+jagung-predict/storage/logs/*.log
+
+# Laravel cache
+jagung-predict/bootstrap/cache/*.php
+
+# =====================================================
+# IDE / Editor
+# =====================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =====================================================
+# Operating System
+# =====================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =====================================================
+# Temporary files
+# =====================================================
+*.tmp
+*.temp
+*.bak
+
+# =====================================================
+# Google Colab
+# =====================================================
+.colab/

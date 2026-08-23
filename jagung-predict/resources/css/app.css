@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ══════════════════════════════════════════════
+   SIPERTANI — CSS Variables (Lovable → Laravel)
+   oklch dikonversi ke hsl agar Tailwind v3 bisa baca
+   ══════════════════════════════════════════════ */
+:root {
+  --radius: 1rem;
+
+  /* Background — krem hangat #f5f0e8 */
+  --background:        43 38% 94%;
+  --foreground:        150 38% 13%;
+
+  /* Card */
+  --card:              43 20% 99%;
+  --card-foreground:   150 38% 13%;
+
+  /* Popover */
+  --popover:           0 0% 100%;
+  --popover-foreground: 150 38% 13%;
+
+  /* Primary — hijau hutan #1a3c2a */
+  --primary:           150 38% 17%;
+  --primary-foreground: 43 38% 94%;
+
+  /* Secondary */
+  --secondary:         128 22% 88%;
+  --secondary-foreground: 150 38% 17%;
+
+  /* Muted */
+  --muted:             85 16% 91%;
+  --muted-foreground:  150 10% 45%;
+
+  /* Accent — hijau lembut #a0c49d */
+  --accent:            127 24% 70%;
+  --accent-foreground: 150 38% 13%;
+
+  /* Destructive */
+  --destructive:       16 66% 47%;
+  --destructive-foreground: 43 38% 94%;
+
+  /* Border & Input */
+  --border:            115 14% 83%;
+  --input:             115 13% 86%;
+  --ring:              143 30% 40%;
+
+  /* Aksen custom SIPERTANI */
+  --aksen:             127 35% 58%;
+  --aksen-2:           82 32% 65%;
+  --tanah:             30 24% 38%;
+  --langit:            210 34% 58%;
+
+  /* Chart */
+  --chart-1:           150 38% 17%;
+  --chart-2:           138 30% 45%;
+  --chart-3:           82 32% 65%;
+  --chart-4:           30 24% 45%;
+  --chart-5:           210 30% 52%;
+
+  /* Sidebar */
+  --sidebar:           43 20% 99%;
+  --sidebar-foreground: 150 38% 13%;
+  --sidebar-primary:   150 38% 17%;
+  --sidebar-primary-foreground: 43 38% 94%;
+  --sidebar-accent:    128 20% 91%;
+  --sidebar-accent-foreground: 150 38% 17%;
+  --sidebar-border:    115 14% 83%;
+  --sidebar-ring:      143 30% 40%;
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Poppins', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Gradient ambient khas Lovable */
+    background-image:
+      radial-gradient(
+        ellipse at 0% 0%,
+        hsl(var(--accent) / 0.18) 0%,
+        transparent 55%
+      ),
+      radial-gradient(
+        ellipse at 100% 100%,
+        hsl(var(--aksen-2) / 0.12) 0%,
+        transparent 55%
+      );
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fraunces', 'Poppins', serif;
+    letter-spacing: -0.01em;
+  }
+}

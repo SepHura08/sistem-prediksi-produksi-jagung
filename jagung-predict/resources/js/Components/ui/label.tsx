@@ -1,0 +1,1 @@
+export * from '@/Lovable/components/ui/label'
